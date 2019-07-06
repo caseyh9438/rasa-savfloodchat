@@ -1,0 +1,32 @@
+intents:
+- address
+- affirm
+- deny
+- goodbye
+- greet
+- report_flood
+templates:
+  utter_address:
+  - text: Then please provide a physical address near the flooded area.
+  utter_come_back_if_needed:
+  - text: That's fine. If you need to report a flood in the future shoot me text saying
+      'report flood'
+  utter_goodbye:
+  - text: Bye
+  utter_greet:
+  - text: Greetings
+  utter_introduction:
+  - text: Hey. Do you need to report a flood?
+  utter_location:
+  - text: Would you like to mark the flood as your current location?
+  utter_success:
+  - text: Thank you for letting us know! We've added your flood report to the Savannah
+      Floods community map.
+actions:
+- utter_address
+- utter_come_back_if_needed
+- utter_goodbye
+- utter_greet
+- utter_introduction
+- utter_location
+- utter_success
