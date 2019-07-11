@@ -1,3 +1,9 @@
+# Summary
+This is an intelligent Python chatbot that feeds data from residents into the Floodsight backend for populating the Floodsight citizen reporting application, and allows residents to get relevant inforation by asking questions via SMS.
+
+It's intended to provide residents a low-frequency way to get current emergency information as well as to report on conditions to augment forecasting insights.
+
+It is built in Python, 
 Download Docker to your computer
 Git clone repository
 
