@@ -5,6 +5,14 @@ intents:
 - goodbye
 - greet
 - report_flood
+
+entities:
+- addres
+
+slots:
+  addres:
+    type: text
+
 templates:
   utter_address:
   - text: Then please provide a physical address near the flooded area.
@@ -30,3 +38,4 @@ actions:
 - utter_introduction
 - utter_location
 - utter_success
+- floodaction

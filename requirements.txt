@@ -30,6 +30,8 @@ Flask==1.0.3
 Flask-Cors==3.0.8
 future==0.17.1
 gast==0.2.2
+geographiclib==1.49
+geopy==1.20.0
 gevent==1.4.0
 greenlet==0.4.15
 grpcio==1.22.0

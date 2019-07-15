@@ -5,4 +5,10 @@ FROM rasa/rasa-sdk:latest
 RUN apt-get update && \
     apt-get install -y git
 
+RUN pip install -r requirements.txt
+
+RUN pip install geopy
+
+RUN pip install pymongo
+
 RUN pip install dnspython

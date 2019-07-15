@@ -27,8 +27,7 @@
 * deny
   - utter_address
 * address
-  - utter_success
-  - utter_goodbye
+  - floodaction
 
 ## Happy Path 5
 * report_flood
@@ -36,8 +35,7 @@
 * deny
   - utter_address
 * address
-  - utter_success
-  - utter_goodbye
+  - floodaction
   
 ## Happy Path 6
 * report_flood
@@ -63,5 +61,8 @@
 * deny
     - utter_address
 * address
-    - utter_success
-    - utter_goodbye
+    - floodaction
+    
+## Happy Path
+* address
+ - floodaction

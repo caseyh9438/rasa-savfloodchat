@@ -6,9 +6,9 @@ services:
       - 5005:5005
     volumes:
       - ./:/app
-    command: run --enable-api
+    command: run --enable-api --credentials credentials.yml
 
   action_server:
-    image: rasa/rasa-sdk:latest
+    build: .
     volumes:
       - ./actions:/app/actions
