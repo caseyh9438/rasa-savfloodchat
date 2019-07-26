@@ -3,12 +3,45 @@ services:
   rasa:
     image: rasa/rasa:latest-full
     ports:
-      - 5005:5005
+      - "80:5005"
     volumes:
       - ./:/app
+#    networks:
+#      - nginx_network
     command: run --enable-api --credentials credentials.yml
 
   action_server:
     build: .
     volumes:
       - ./actions:/app/actions
+
+#  nginx-proxy:
+#    image: jwilder/nginx-proxy
+#    container_name: nginx-proxy
+#    ports:
+#      - "80:80"
+#    volumes:
+#      - /var/run/docker.sock:/tmp/docker.sock:ro
+#      - default.conf:/etc/nginx/conf.d/default.conf:ro
+#
+#networks:
+#  default:
+#    external:
+#      name: nginx-proxy
+
+#  nginx:
+#    image: nginx
+#    ports:
+#      - "5005:80"
+#    environment:
+#      - NGINX_HOST=_
+#      - NGINX_PORT=5005
+#    depends_on:
+#      - rasa
+#    networks:
+#      - nginx_network
+#    command: /bin/bash -c "envsubst /etc/nginx/conf.c/default.conf && exec nginx -g 'daemon off;'"
+#
+#networks:
+#  nginx_network:
+#    driver: bridge
